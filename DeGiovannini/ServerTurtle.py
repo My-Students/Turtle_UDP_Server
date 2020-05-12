@@ -11,7 +11,7 @@ def eseguiComandi(msg, tartaruga):
     vet = msg.split("_")
     comando = vet[0]
     val = int(vet[1])
-    """Comandi: forward_x back_y left_z right_k \n")"""
+    """Comandi: forward_x back_y left_z right_k"""
     if comando == "forward":
         tartaruga.forward(val)
     elif comando == "backward":
@@ -38,6 +38,7 @@ def server():
     bufferSize = 1024
     msgClientServer = "Salve signor Client"
     bytesSend = str.encode(msgClientServer)
+    
     #Creazione del Socket Server  
     socketServer = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socketServer.bind((ip, porta))
